@@ -7,3 +7,4 @@ This is a nextjs full authentication and authorization web app with complete use
 # Firebase Functions for authentication and authorization
 # Tailwind CSS + MUI
 # Nextjs 14
+# Typrescript
