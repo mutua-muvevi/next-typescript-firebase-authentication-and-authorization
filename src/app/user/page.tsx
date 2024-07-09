@@ -1,6 +1,6 @@
-import { Item, ItemAccess } from "./api/items/route";
+import { Item, ItemAccess } from "../api/items/route";
 
-const Homepage = async () => {
+const UserPage = async () => {
 	let items: Item[] = [];
 
 	const response = await fetch(`${process.env.API_URL}/api/items`);
@@ -24,10 +24,13 @@ const Homepage = async () => {
 
 					<span
 						className={`${
-							item.access === ItemAccess.ADMIN ? "bg-orange-400"
-							: item.access === ItemAccess.PRO ? "bg-emerald-400"
-							: item.access === ItemAccess.USER ? "bg-pink-400"
-							: "bg-slate-400"
+							item.access === ItemAccess.ADMIN
+								? "bg-orange-400"
+								: item.access === ItemAccess.PRO
+								? "bg-emerald-400"
+								: item.access === ItemAccess.USER
+								? "bg-pink-400"
+								: "bg-slate-400"
 						} text-white text-xs px-2 p-1 rounded-full`}
 					>
 						{item.access}
@@ -38,4 +41,4 @@ const Homepage = async () => {
 	);
 };
 
-export default Homepage;
+export default UserPage;
